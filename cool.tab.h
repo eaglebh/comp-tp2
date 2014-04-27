@@ -64,7 +64,8 @@
      ASSIGN = 280,
      NOT = 281,
      LE = 282,
-     ERROR = 283
+     ERROR = 283,
+     LET_STMT = 285
    };
 #endif
 /* Tokens.  */
@@ -94,6 +95,7 @@
 #define NOT 281
 #define LE 282
 #define ERROR 283
+#define LET_STMT 285
 
 
 
@@ -103,7 +105,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 26 "cool.y"
+#line 44 "cool.y"
 
   Boolean boolean;
   Symbol symbol;
@@ -123,7 +125,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 127 "cool.tab.h"
+#line 129 "cool.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -132,4 +134,18 @@ typedef union YYSTYPE
 
 extern YYSTYPE cool_yylval;
 
+#if ! defined YYLTYPE && ! defined YYLTYPE_IS_DECLARED
+typedef struct YYLTYPE
+{
+  int first_line;
+  int first_column;
+  int last_line;
+  int last_column;
+} YYLTYPE;
+# define yyltype YYLTYPE /* obsolescent; will be withdrawn */
+# define YYLTYPE_IS_DECLARED 1
+# define YYLTYPE_IS_TRIVIAL 1
+#endif
+
+extern YYLTYPE cool_yylloc;
 

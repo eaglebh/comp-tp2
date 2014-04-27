@@ -1,1 +1,2 @@
-/home/prof/renato/cool/student/src/PA3/myparser
+#!/bin/csh -f
+./lexer $* | ./parser $*
