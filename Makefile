@@ -1,7 +1,7 @@
 
 ASSN = 3
 CLASS= dcc053
-CLASSDIR= /home/grad/ccomp/11/pablom/compiladores/student
+CLASSDIR= ./student
 LIB= -L/usr/lib -lfl 
 AR= ar
 ARCHIVE_NEW= -cr
